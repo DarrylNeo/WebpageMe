@@ -1,0 +1,134 @@
+@charset "utf-8";
+body{
+  margin:0;
+  padding:0;
+}
+#nav{
+	height: 100px;
+	width: 100%;
+	background:#838383;
+}
+
+.Nav-Wrapper ul
+{
+	position: absolute;
+	top: 12px;
+	right: 12px;
+}
+
+.Nav-Wrapper ul li{
+	display: inline;
+	list-style-type:none;
+	padding: 1em;
+		
+}
+
+.Nav-Wrapper a
+{
+	color: #FFFFFF;
+	text-decoration:none;
+	font-size:35px;
+}
+	
+.Nav-Wrapper{
+	margin-left:auto;
+	margin-right:auto;
+	width:80%;
+	height:100px;
+	text-align:center;
+	opacity:1;
+}
+
+.Nav-Wrapper ul li:hover{
+	background:#494141;
+}
+	
+#middle{
+	background-image:url(Image1.jpg);
+	background-repeat:no-repeat;
+	background-size:cover;
+	height: 100vh;
+	color:white;
+	display:flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items: center;
+	clear:left;
+}
+
+footer{
+	background-color:#838383;
+}
+
+P.Contact{
+	margin: 0;
+	text-align:right;
+	font-size:35px;
+	color:white;
+}
+
+img{
+	width:10%;
+    height: 100px;
+	float:left;
+}
+
+.logo-wrapper
+{
+	background: #838383;
+}
+
+.image
+{
+	transition: opacity 0.5s;
+}
+
+.image:hover{
+	opacity: 0.5;
+}
+
+p{
+	font-size:30px;
+	text-align:center;
+}
+
+
+h1{
+	font-size:36px;
+	text-align:center;
+
+}
+
+.popup1{
+		font-size:24px;
+}
+
+.popup1 p{
+	display:none; 
+	padding:20px;
+	background-color:grey;
+	opacity:0.5;
+
+ }
+
+.popup1:hover p{
+	display:block; 
+	
+}
+
+.popup2{
+		font-size:24px;
+}
+
+.popup2 p{
+	display:none; 
+	padding:20px;
+	background-color:grey;
+	opacity:0.5;
+
+ }
+
+.popup2:hover p{
+	display:block; 
+	
+}

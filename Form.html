@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<link rel="shortcut icon" href="Logo1.png" sizes="16x16">
+<meta charset="utf-8">
+<title>Form</title>
+<link href="StyleSheet1.css" rel="stylesheet" type="text/css">
+<script>
+	function Validation(){
+		var error = false;
+		var ErrorMsg= "";
+		
+		var Name= document.getElementById("Name").value;
+		var Email= document.getElementById("email").value;
+		var Genders= document.getElementsByName("gender");
+		var Feedback= document.getElementById("Feedback").value;
+		
+		for(var i=0, length=Genders.length; i<length;i++){
+			if(Genders[i].checked){
+				error=false;
+				break;
+			}
+			else{
+				error=true;
+			}	
+		}
+		if(Name==""|| Name==" " || Name==null){
+			error=true;
+			ErrorMsg += "Pls type in your name";
+		}
+		if(Email=="" || Email==" " || Email==null){
+			error=true;
+			ErrorMsg += "Pls type in Email\n";
+		}
+		if(Feedback=="" || Feedback==" " || Feedback=null){
+			error=true;
+			ErrorMsg +="Pls Input Feedback";
+		}
+		if(error){
+			alert(ErrorMsg);
+			return false;
+		}
+		else{
+			return true;
+		}
+	}
+	
+</script>
+</head>
+
+<body>
+    <div id="nav">
+       
+       	<div class="logo-wrapper">
+			<a href="Index.html"><img class="image" src="Logo1.png"/></a>
+		   </div>
+        
+         <div class="Nav-Wrapper">
+        
+            <ul>
+          <li><a href="AboutMe.html" >About Me</a></li>
+          <li><a href="EducationalBackground.html" >Educational Background</a></li>
+          <li><a href="Events&People.html" >Events / People</a></li>
+          <li><a href="Portfolio.html" >Portfolio</a></li>
+		  <li><a href="Form.html"> Feedback Form</a></li>
+            </ul>
+          </div>
+          
+       </div>
+       
+       <div id="middle">
+       <form name="Feedback" action="Submission.html" method="post" onSubmit="return Validation()">
+       <fieldset>
+	     <legend> Feedback Form</legend>
+		   Name:
+		   <input type ="text" id="Name" name="Name" size="50" maxlength="50" placeholder="Enter Name"> <br>
+		   Email:
+		   <input type="email" id="email" name="email" size="100" maxlength="100" placeholder="xxxx@XXX.com"> <br>
+		   Gender:
+		   <input type="radio" name="gender" id="M" value="Male"> Male 
+		   <input type="radio" name="gender" id="F" value="Female"> Female <br>
+		   Feedback:
+		   <textarea id="Feedback" name="Feedback" rows="5" cols="50" maxlength="300" placeholder="Enter Feedback" ></textarea>
+		   <br>		   
+		   <input type="submit" name="Submit" value="Enter">
+		   <input type="reset"  name="Reset"  value="Cancel">
+		   </fieldset>
+		   </form>
+</div>
+	
+	<footer>
+   <p class="Contact">Contact Me: 84227177</p>
+   </footer>
+</body>
+</html>
